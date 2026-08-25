@@ -1,5 +1,14 @@
 """
-main.py — Demonstração das etapas: E-mail -> Leitura -> Extração -> Salvamento JSON
+main.py — Demonstração das etapas: E-mail -> Leitura -> Extração
+
+Executa o fluxo nos 3 cenários obrigatórios da avaliação:
+  1) normal_ECO_00125.txt  (deve extrair os 15 campos sem faltas)
+  2) ambiguo_ECO_00126.txt (deve faltar Data_Implementacao_Alvo)
+  3) erro_ECO_00127.txt    (extrai tudo, mas orçamento vem "-500" -> a
+                             VALIDAÇÃO, próxima etapa, é quem vai barrar isso)
+
+Rode a partir da pasta src/:
+    python main.py
 """
 
 import json
@@ -31,26 +40,15 @@ def main():
     for email in emails:
         eco = extrator.extrair(email.conteudo, nome_arquivo=email.nome_arquivo)
         leitor.marcar_como_processado(email)
-        
-        # Adiciona o dicionário (incluindo os metadados úteis) na lista
-        dados_eco = eco.to_dict()
-        dados_eco["_arquivo_origem"] = eco.arquivo_origem
-        dados_eco["_campos_ausentes"] = eco.campos_ausentes
-        
-        resultados.append(dados_eco)
+        resultados.append(eco)
 
         print("\n" + "=" * 70)
         print(f"Arquivo: {email.nome_arquivo}")
-        print(json.dumps(dados_eco, indent=2, ensure_ascii=False))
+        print(json.dumps(eco.to_dict(), indent=2, ensure_ascii=False))
         if eco.campos_ausentes:
-            print(f"⚠️ Campos ausentes: {eco.campos_ausentes}")
+            print(f"⚠️  Campos ausentes: {eco.campos_ausentes}")
         else:
             print("✅ Todos os 15 campos extraídos com sucesso.")
-
-    # SALVA O JSON NA RAIZ DO PROJETO
-    caminho_json = Path(__file__).parent.parent / "ecos_extraidas.json"
-    caminho_json.write_text(json.dumps(resultados, indent=2, ensure_ascii=False), encoding="utf-8")
-    logger.info("Arquivo JSON gerado com sucesso em: %s", caminho_json.resolve())
 
     return resultados
 
