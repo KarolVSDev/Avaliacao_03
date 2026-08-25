@@ -7,7 +7,15 @@ from pathlib import Path
 from dotenv import load_dotenv
 from playwright.sync_api import Page, sync_playwright
 
-from src.logger_config import logger
+# Import defensivo do logger configurado pela equipe
+try:
+    from src.logger_config import logger
+except ImportError:
+    try:
+        from logger_config import logger
+    except ImportError:
+        import logging
+        logger = logging.getLogger("eco_automation.bot")
 
 load_dotenv()
 

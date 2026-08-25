@@ -1,0 +1,74 @@
+[
+  {
+    "arquivo": "ambiguo_ECO_00126.txt",
+    "gateway_action": "VALIDACAO_HUMANA",
+    "mensagem_gateway": "Data de implementação alvo ausente na ECO ECO-00126.",
+    "status_web": "PENDENTE_VALIDACAO_HUMANA",
+    "evidencia": "/app/evidencias/ECO-00126_pendente_validacao_humana_20260825_174654.png",
+    "dados": {
+      "Codigo_ECO": "ECO-00126",
+      "Titulo_Alteracao": "Alteração dimensional do suporte",
+      "Area_Solicitante": "Engenharia",
+      "Nome_Engenheiro_Responsavel": "Carlos Lima",
+      "Email_Solicitante": "carlos.lima@matriz.example",
+      "Data_Recebimento": "2026-08-21",
+      "Nivel_Prioridade": "Média",
+      "Status_Atual": null,
+      "Justificativa_Tecnica": null,
+      "Codigo_Item_Afetado": "SUP-778",
+      "Categoria_Mudanca": "Componente",
+      "Impacto_Custos": "Sim",
+      "Estimativa_Orcamento": "3500",
+      "Unidade_Fabril": "Manaus",
+      "Data_Implementacao_Alvo": null
+    }
+  },
+  {
+    "arquivo": "erro_ECO_00127.txt",
+    "gateway_action": "REJEITAR_E_REGISTRAR",
+    "mensagem_gateway": "Dado Inválido detectado na ECO ECO-00127: custo_estimado_usd: Value error, Orçamento inválido (-500.0 USD). Valores negativos não são permitidos.",
+    "status_web": "BLOQUEADO",
+    "evidencia": null,
+    "dados": {
+      "Codigo_ECO": "ECO-00127",
+      "Titulo_Alteracao": "Atualização urgente de firmware",
+      "Area_Solicitante": "Engenharia de Software",
+      "Nome_Engenheiro_Responsavel": "Bruno Costa",
+      "Email_Solicitante": "bruno.costa@matriz.example",
+      "Data_Recebimento": "2026-08-21",
+      "Nivel_Prioridade": "Alta",
+      "Status_Atual": "Recebido",
+      "Justificativa_Tecnica": "Correção emergencial de firmware.",
+      "Codigo_Item_Afetado": "FW-900",
+      "Categoria_Mudanca": "Software",
+      "Impacto_Custos": "Sim",
+      "Estimativa_Orcamento": "-500",
+      "Unidade_Fabril": "Manaus",
+      "Data_Implementacao_Alvo": "2026-09-01"
+    }
+  },
+  {
+    "arquivo": "normal_ECO_00125.txt",
+    "gateway_action": "PROSSEGUIR_SISTEMA",
+    "mensagem_gateway": "ECO ECO-00125 validada com sucesso em todos os campos.",
+    "status_web": "REGISTRADO",
+    "evidencia": "/app/evidencias/ECO-00125_confirmacao_20260825_174655.png",
+    "dados": {
+      "Codigo_ECO": "ECO-00125",
+      "Titulo_Alteracao": "Atualização do layout do módulo de refrigeração",
+      "Area_Solicitante": "Engenharia",
+      "Nome_Engenheiro_Responsavel": "Ana Souza",
+      "Email_Solicitante": "ana.souza@matriz.example",
+      "Data_Recebimento": "2026-08-20",
+      "Nivel_Prioridade": "Alta",
+      "Status_Atual": "Recebido",
+      "Justificativa_Tecnica": "Adequação do posicionamento do componente para melhoria de montagem.",
+      "Codigo_Item_Afetado": "ITEM-REF-220",
+      "Categoria_Mudanca": "Layout",
+      "Impacto_Custos": "Não",
+      "Estimativa_Orcamento": "0",
+      "Unidade_Fabril": "Manaus",
+      "Data_Implementacao_Alvo": "2026-09-15"
+    }
+  }
+]
