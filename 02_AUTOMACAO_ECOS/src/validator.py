@@ -1,0 +1,1 @@
+# Regras de negócio, 15 campos e detecção de erros/ambiguidade

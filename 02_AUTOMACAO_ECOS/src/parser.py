@@ -1,0 +1,1 @@
+# Leitura e extração dos dados dos arquivos .txt

@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Sistema ECO Fake</title></head>
+<body><h1>Cadastro de ECO — Sistema Fake</h1><form id="eco"><div id="campos"></div><button>Salvar ECO</button></form><p id="msg"></p>
+<script>
+const fs=["Codigo_ECO", "Titulo_Alteracao", "Area_Solicitante", "Nome_Engenheiro_Responsavel", "Email_Solicitante", "Data_Recebimento", "Nivel_Prioridade", "Status_Atual", "Justificativa_Tecnica", "Codigo_Item_Afetado", "Categoria_Mudanca", "Impacto_Custos", "Estimativa_Orcamento", "Unidade_Fabril", "Data_Implementacao_Alvo"]; const c=document.getElementById('campos');
+fs.forEach(f=>{let l=document.createElement('label');l.textContent=f+' ';let i=document.createElement('input');i.name=f;i.id=f;l.appendChild(i);c.appendChild(l);c.appendChild(document.createElement('br'));});
+document.getElementById('eco').onsubmit=e=>{e.preventDefault();document.getElementById('msg').textContent='ECO salva com sucesso';};
+</script></body></html>

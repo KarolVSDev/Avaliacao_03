@@ -1,0 +1,1 @@
+# Validações para ECO válida, incompleta e com dado inválido
