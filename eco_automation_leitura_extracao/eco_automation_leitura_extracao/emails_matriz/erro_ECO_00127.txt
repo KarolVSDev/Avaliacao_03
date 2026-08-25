@@ -1,0 +1,15 @@
+ECO: ECO-00127
+Título: Atualização urgente de firmware
+Área: Engenharia de Software
+Engenheiro responsável: Bruno Costa
+E-mail: bruno.costa@matriz.example
+Data de recebimento: 2026-08-21
+Prioridade: Alta
+Status: Recebido
+Justificativa: Correção emergencial de firmware.
+Código do item: FW-900
+Categoria: Software
+Impacto em custos: Sim
+Estimativa de orçamento: -500 USD
+Unidade fabril: Manaus
+Data de implementação alvo: 2026-09-01
