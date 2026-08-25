@@ -1,1 +1,9 @@
-# Orquestração do container com TZ=America/Manaus
+services:
+  automacao-ecos:
+    build: .
+    container_name: bot_ecos_tce_am
+    environment:
+      - TZ=America/Manaus
+    volumes:
+      - ./:/app
+    command: pytest
