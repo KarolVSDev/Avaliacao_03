@@ -1,1 +1,13 @@
 # Orquestração do container com TZ=America/Manaus
+services:
+  automacao-ecos:
+    build: .
+    container_name: bot_ecos_tce_am
+    environment:
+      - TZ=America/Manaus
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    volumes:
+      - ./:/app
+    command: python src/main.py

@@ -1,1 +1,12 @@
 # Dependências do Python (playwright, pytest, pandas, openpyxl, etc.)
+
+playwright>=1.40.0
+pytest>=8.0.0
+pandas>=2.0.0
+openpyxl>=3.1.0
+python-dotenv>=1.0.0
+dotenv
+# pydantic
+pytest
+pydantic>=2.0.0
+circuit_breaker

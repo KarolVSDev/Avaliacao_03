@@ -1,0 +1,35 @@
+# Python / Ambientes Virtuais
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+ENV/
+env/
+
+# Testes e Cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Playwright e Evidências locais geradas pelo robô
+/test-results/
+/playwright-report/
+/evidencias/
+*.png
+
+# Logs e Dados de Execução local
+*.log
+logs/
+saidas/
+entrada_processo3/
+
+# Docker e IDEs
+.DS_Store
+.vscode/
+.idea/
+.dockerignore
+
+# Credenciais e Variáveis de Ambiente (MUITO IMPORTANTE)
+.env
