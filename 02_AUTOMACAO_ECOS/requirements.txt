@@ -9,3 +9,4 @@ dotenv
 # pydantic
 pytest
 pydantic>=2.0.0
+circuit_breaker

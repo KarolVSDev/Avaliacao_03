@@ -4,7 +4,7 @@
     "gateway_action": "VALIDACAO_HUMANA",
     "mensagem_gateway": "Data de implementação alvo ausente na ECO ECO-00126.",
     "status_web": "PENDENTE_VALIDACAO_HUMANA",
-    "evidencia": "/app/evidencias/ECO-00126_pendente_validacao_humana_20260825_174654.png",
+    "evidencia": "C:\\Avaliacao_03\\02_AUTOMACAO_ECOS\\evidencias\\ECO-00126_pendente_validacao_humana_20260828_151052.png",
     "dados": {
       "Codigo_ECO": "ECO-00126",
       "Titulo_Alteracao": "Alteração dimensional do suporte",
@@ -52,7 +52,7 @@
     "gateway_action": "PROSSEGUIR_SISTEMA",
     "mensagem_gateway": "ECO ECO-00125 validada com sucesso em todos os campos.",
     "status_web": "REGISTRADO",
-    "evidencia": "/app/evidencias/ECO-00125_confirmacao_20260825_174655.png",
+    "evidencia": "C:\\Avaliacao_03\\02_AUTOMACAO_ECOS\\evidencias\\ECO-00125_confirmacao_20260828_151053.png",
     "dados": {
       "Codigo_ECO": "ECO-00125",
       "Titulo_Alteracao": "Atualização do layout do módulo de refrigeração",
