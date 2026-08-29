@@ -58,6 +58,13 @@ def salvar_na_planilha_mestra(dados_eco: dict, status_processamento: str):
 
 
 def main():
+
+    # Garante a criação automática das pastas essenciais em qualquer ambiente
+    Path("data").mkdir(parents=True, exist_ok=True)
+    Path("evidencias").mkdir(parents=True, exist_ok=True)
+    Path("logs").mkdir(parents=True, exist_ok=True)
+    Path("emails_matriz").mkdir(parents=True, exist_ok=True)
+
     logger.info("Iniciando o ciclo automatizado de processamento de ECOs...")
     
     leitor = LeitorEmails(pasta=PASTA_EMAILS)
