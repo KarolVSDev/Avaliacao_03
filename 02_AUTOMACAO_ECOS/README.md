@@ -1,10 +1,10 @@
-# 🚀 Avaliação 03 — Automação de Processamento de ECOs (RPA & DevOps)
+#  Avaliação 03 — Automação de Processamento de ECOs (RPA & DevOps)
 
 Sistema automatizado de ponta a ponta para leitura, validação inteligente, processamento web via Playwright, relatórios e persistência de Ordens de Mudança de Engenharia (ECOs), empacotado em container Docker com esteira de CI/CD integrada via GitHub Actions e publicação no GitHub Container Registry (GHCR).
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 * **Python 3.10+** (Linguagem principal)
 * **Playwright** (Automação web e captura de evidências visuais)
 * **Pydantic** (Validação rigorosa de dados e regras de negócio)
@@ -36,4 +36,3 @@ Sistema automatizado de ponta a ponta para leitura, validação inteligente, pro
 
 
 
-#executando fluxo de atividades

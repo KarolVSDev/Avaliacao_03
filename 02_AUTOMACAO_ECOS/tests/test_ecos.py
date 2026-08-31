@@ -63,6 +63,6 @@ def test_eco_erro_dado_invalido():
     logger.error("Bloqueio de segurança ativado devido a orçamento inválido (-500 USD)!")
 
 
-    #python -m pytest -v
+    # python -m pytest -v
     # para alteracoes no dockerfile/requirements: docker compose up --build
     # arquivos .py e etc: docker compose up
