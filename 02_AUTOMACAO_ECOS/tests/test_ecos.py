@@ -61,3 +61,6 @@ def test_eco_erro_dado_invalido():
     
     assert dado_invalido == True
     logger.error("Bloqueio de segurança ativado devido a orçamento inválido (-500 USD)!")
+
+
+    #python -m pytest -v

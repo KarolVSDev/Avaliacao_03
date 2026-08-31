@@ -1,19 +1,35 @@
-# Documentação da equipe para o professor
+# 🚀 Avaliação 03 — Automação de Processamento de ECOs (RPA & DevOps)
 
-# Orientações para a equipe
+Sistema automatizado de ponta a ponta para leitura, validação inteligente, processamento web via Playwright, relatórios e persistência de Ordens de Mudança de Engenharia (ECOs), empacotado em container Docker com esteira de CI/CD integrada via GitHub Actions e publicação no GitHub Container Registry (GHCR).
 
-André (E-mail $\rightarrow$ Análise $\rightarrow$ Extração):
+---
 
-    Entrega esperada: Um módulo (parser.py ou similar) que lê os arquivos de texto em emails_matriz/ (como normal_ECO_00125.txt, ambiguo_ECO_00126.txt e erro_ECO_00127.txt) e retorna um dicionário estruturado com os dados extraídos (número da ECO, orçamento, data alvo, etc.).
+## 🛠️ Tecnologias Utilizadas
+* **Python 3.10+** (Linguagem principal)
+* **Playwright** (Automação web e captura de evidências visuais)
+* **Pydantic** (Validação rigorosa de dados e regras de negócio)
+* **Pandas / Openpyxl** (Manipulação de planilhas e relatórios)
+* **Docker & Docker Compose** (Containerização e portabilidade)
+* **GitHub Actions** (Esteira de CI/CD automatizada)
+* **GHCR (GitHub Container Registry)** (Repositório de imagens Docker)
 
-João (Validação > Gateway):
+---
 
-    Entrega esperada: Um módulo de regras de negócio (validator.py) que recebe os dados extraídos pelo André, confere com os 15 campos obrigatórios do controle_mestre_ecos.xlsx e classifica o fluxo nos 3 cenários obrigatórios:  
-        - Cenário Normal >  Aprovado para seguir.
-        - Cenário Ambíguo >  Detecta ausência (ex: falta da data de implementação) e direciona para validação humana.  
-        - Cenário de Erro > Detecta dado inválido (ex: orçamento de -500 USD) e aciona o bloqueio.  
+## 📂 Arquitetura e Organização do Projeto
 
-
-Caroline (Sistema >  Registro):
-
-    Entrega esperada: A automação web com Playwright (bot_playwright.py) que interage com o formulário local web/formulario_eco_fake.html, preenche os campos validados, lida com o feedback da tela, além de registrar os logs e evidências (prints).
+```text
+├── .github/workflows/       # Esteira de CI/CD (GitHub Actions)
+├── emails_matriz/           # Fila de arquivos de e-mail de entrada (Simulação)
+├── evidencias/              # Prints de tela gerados pelo Playwright (.png)
+├── data/                    # Planilha mestra oficial de controle (.xlsx)
+├── src/                     # Código-fonte principal da automação
+│   ├── main.py              # Orquestrador principal com Circuit Breaker
+│   ├── extracao_eco.py      # Extrator de dados dos arquivos de ECO
+│   ├── leitura_email.py     # Leitor e gerenciador da fila de e-mails
+│   ├── validator.py         # Gateway de validação de regras de negócio
+│   └── bot_playwright.py    # Automação de preenchimento do formulário web
+├── Dockerfile               # Configuração da imagem Docker
+├── docker-compose.yml       # Orquestração local dos containers
+├── requirements.txt         # Dependências do projeto
+├── ecos_processadas.json    # Relatório geral de processamento
+└── README.md
