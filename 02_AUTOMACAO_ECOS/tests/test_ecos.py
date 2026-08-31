@@ -64,3 +64,5 @@ def test_eco_erro_dado_invalido():
 
 
     #python -m pytest -v
+    # para alteracoes no dockerfile/requirements: docker compose up --build
+    # arquivos .py e etc: docker compose up

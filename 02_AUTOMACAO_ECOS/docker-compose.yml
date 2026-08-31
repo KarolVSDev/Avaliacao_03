@@ -2,7 +2,7 @@
 services:
   automacao-ecos:
     build: .
-    container_name: bot_ecos_tce_am
+    container_name: bot_ecos
     environment:
       - TZ=America/Manaus
     dns:

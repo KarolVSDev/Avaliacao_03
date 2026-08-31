@@ -33,3 +33,7 @@ Sistema automatizado de ponta a ponta para leitura, validação inteligente, pro
 ├── requirements.txt         # Dependências do projeto
 ├── ecos_processadas.json    # Relatório geral de processamento
 └── README.md
+
+
+
+#executando fluxo de atividades
